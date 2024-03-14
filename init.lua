@@ -163,6 +163,27 @@ vim.opt.expandtab = true
 
 vim.opt.termguicolors = true
 
+-- Move lines up and down
+-- See https://vim.fandom.com/wiki/Moving_lines_up_or_down
+vim.keymap.set('n', '<A-j>', ':m+<CR>==')
+vim.keymap.set('n', '<A-k>', ':m-2<CR>==')
+vim.keymap.set('v', '<A-j>', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', '<A-k>', ":m '<-2<CR>gv=gv")
+vim.keymap.set('i', '<Esc><A-j>', ':m+<CR>==gi')
+vim.keymap.set('i', '<Esc><A-k>', ':m-2<CR>==gi')
+
+-- Center buffer on line after scroll
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', 'n', 'nzz')
+vim.keymap.set('n', 'N', 'Nzz')
+
+-- Keep cursor when joining lines
+vim.keymap.set('n', 'J', 'mzJ`z')
+
+-- Toggle background
+vim.keymap.set('n', '<leader>tb', ":let &bg=(&bg=='light'?'dark':'light')<CR>")
+vim.keymap.set('n', '<leader>tt', ":Telescope colorscheme<CR>")
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
