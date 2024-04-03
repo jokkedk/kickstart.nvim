@@ -3,27 +3,30 @@
 --
 -- See the kickstart.nvim README for more information
 return {
-    'ThePrimeagen/vim-be-good',
+    "ThePrimeagen/vim-be-good",
     -- {
-    --     'akinsho/bufferline.nvim',
-    --     version = '*',
-    --     -- dependencies = 'nvim-tree/nvim-web-devicons',
-    --     opts = {},
+    --     "ThePrimeagen/refactoring.nvim",
+    --     dependencies = {
+    --         "nvim-lua/plenary.nvim",
+    --         "nvim-treesitter/nvim-treesitter",
+    --     },
+    --     config = function()
+    --         require("refactoring").setup()
+    --     end,
     -- },
-    {
-        "ThePrimeagen/refactoring.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-treesitter/nvim-treesitter",
-        },
-        config = function()
-            require("refactoring").setup()
-        end,
-    },
     {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
         dependencies = { "nvim-lua/plenary.nvim" }
     },
-    'nvim-treesitter/nvim-treesitter-context',
+    {
+        "nvim-treesitter/nvim-treesitter-context",
+        opts = {
+            max_lines = 4
+        }
+    },
+    {
+        "folke/trouble.nvim",
+        opts = {}
+    },
 }
