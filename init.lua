@@ -173,11 +173,11 @@ vim.keymap.set('i', '<Esc><A-j>', ':m+<CR>==gi')
 vim.keymap.set('i', '<Esc><A-k>', ':m-2<CR>==gi')
 
 -- buffers
-vim.keymap.set("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
-vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Next buffer" })
-vim.keymap.set("n", "[b", "<cmd>bprevious<cr>", { desc = "Prev buffer" })
-vim.keymap.set("n", "]b", "<cmd>bnext<cr>", { desc = "Next buffer" })
-vim.keymap.set("n", "<leader>bb", "<cmd>e #<cr>", { desc = "Switch to Other Buffer" })
+vim.keymap.set('n', '<S-h>', '<cmd>bprevious<cr>', { desc = 'Prev buffer' })
+vim.keymap.set('n', '<S-l>', '<cmd>bnext<cr>', { desc = 'Next buffer' })
+vim.keymap.set('n', '[b', '<cmd>bprevious<cr>', { desc = 'Prev buffer' })
+vim.keymap.set('n', ']b', '<cmd>bnext<cr>', { desc = 'Next buffer' })
+vim.keymap.set('n', '<leader>bb', '<cmd>e #<cr>', { desc = 'Switch to Other Buffer' })
 
 -- Center buffer on line after scroll
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
@@ -186,8 +186,8 @@ vim.keymap.set('n', 'n', 'nzz')
 vim.keymap.set('n', 'N', 'Nzz')
 
 -- better indenting
-vim.keymap.set("v", "<", "<gv")
-vim.keymap.set("v", ">", ">gv")
+vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv')
 
 -- Keep cursor when joining lines
 vim.keymap.set('n', 'J', 'mzJ`z')
@@ -196,7 +196,7 @@ vim.keymap.set('i', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
 
 -- Toggle background
 vim.keymap.set('n', '<leader>tb', ":let &bg=(&bg=='light'?'dark':'light')<CR>")
-vim.keymap.set('n', '<leader>tt', ":Telescope colorscheme<CR>")
+vim.keymap.set('n', '<leader>tt', ':Telescope colorscheme<CR>')
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -785,8 +785,8 @@ require('lazy').setup({
       }
     end,
   },
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  { "loctvl842/monokai-pro.nvim", name = "monokai", priority = 1000 },
+  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+  { 'loctvl842/monokai-pro.nvim', name = 'monokai', priority = 1000 },
   { -- You can easily change to a different colorscheme.
     -- Change the name of the colorscheme plugin below, and then
     -- change the command in the config to whatever the name of that colorscheme is.
